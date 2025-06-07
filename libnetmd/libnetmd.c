@@ -239,7 +239,6 @@ int netmd_move_track(netmd_dev_handle* dev, const uint16_t start, const uint16_t
     netmd_copy_word_to_buffer(&buf, finish, 0);
 
     netmd_exch_message(dev, hs, 8, reply);
-    netmd_exch_message(dev, request, 16, reply);
     ret = netmd_exch_message(dev, request, 16, reply);
 
     if(ret < 0)
